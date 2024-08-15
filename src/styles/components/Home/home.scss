@@ -1,0 +1,52 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+
+  @media screen and (max-width: $screen-xs-max) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .status-radio {
+    position: relative;
+    display: flex;
+    gap: 15px;
+    border: 1px solid $c-input-border;
+    padding: 10px;
+    border-radius: 4px;
+
+    &::before {
+      content: "Status";
+      display: block;
+      position: absolute;
+      background: $c-bg-main;
+      padding: 0 3px;
+      font-size: 13px;
+      color: $c-font-placeholder;
+      top: 0;
+      left: 7px;
+      transform: translateY(-50%);
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      flex-direction: row;
+    }
+  }
+}
+
+.table-container {
+  flex: 1;
+  min-height: 400px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loading-container {
+    height: 100%;
+    width: fit-content;
+  }
+}

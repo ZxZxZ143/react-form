@@ -1,0 +1,37 @@
+.table-layout {
+  align-self: flex-start;
+  width: 100%;
+  max-width: calc(100vw - 30px);
+  overflow: hidden;
+
+  .table {
+    width: 100%;
+    max-width: 100%;
+    max-height: 680px;
+    min-width: 300px;
+    overflow-x: auto;
+
+    .MuiTableCell-root {
+      border: 1px solid $c-table-border;
+    }
+
+    .downwards {
+      transform-origin: center;
+      transform: rotate(180deg);
+      transition: transform .4s;
+    }
+
+    .icon {
+      max-height: 18px;
+      height: 100%;
+      width: auto;
+      fill: $c-icon-main;
+      translate: 0 5px;
+    }
+
+    .sortable-cell {
+      cursor: pointer;
+    }
+  }
+}
+
